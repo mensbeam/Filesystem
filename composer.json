@@ -1,0 +1,29 @@
+{
+    "name": "mensbeam/filesystem",
+    "description": "Simplifies using many of php's built-in filesystem functions",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "MensBeam\\": "lib/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Dustin Wilson",
+            "email": "dustin@dustinwilson.com"
+        }
+    ],
+    "require": {
+        "php": ">=8.1",
+        "symfony/polyfill-ctype": ">=1.8",
+        "symfony/polyfill-mbstring": ">=1.8"
+    },
+    "require-dev": {
+        "symfony/filesystem": ">=6.2"
+    },
+    "suggest": {
+        "ext-ctype": "For better performance",
+        "ext-mbstring": "For better performance"
+    }
+}
