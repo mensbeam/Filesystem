@@ -10,6 +10,7 @@ declare(strict_types=1);
 namespace MensBeam;
 use MensBeam\Filesystem\{
     FileNotFoundException,
+    InvalidArgumentException,
     IOException
 };
 
@@ -407,11 +408,11 @@ class Filesystem {
      */
     public static function makePathRelative(string $endPath, string $startPath): string {
         if (!self::isAbsolutePath($startPath)) {
-            throw new \InvalidArgumentException(sprintf('The start path "%s" is not absolute.', $startPath));
+            throw new InvalidArgumentException(sprintf('The start path "%s" is not absolute.', $startPath));
         }
 
         if (!self::isAbsolutePath($endPath)) {
-            throw new \InvalidArgumentException(sprintf('The end path "%s" is not absolute.', $endPath));
+            throw new InvalidArgumentException(sprintf('The end path "%s" is not absolute.', $endPath));
         }
 
         // Normalize separators on Windows
