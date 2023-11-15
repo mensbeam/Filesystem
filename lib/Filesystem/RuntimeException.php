@@ -9,5 +9,5 @@
 declare(strict_types=1);
 namespace MensBeam\Filesystem;
 
-class InvalidArgumentException extends \InvalidArgumentException {
+class RuntimeException extends \RuntimeException {
 }

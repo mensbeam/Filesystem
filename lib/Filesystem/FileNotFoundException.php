@@ -9,7 +9,6 @@
 declare(strict_types=1);
 namespace MensBeam\Filesystem;
 
-
 /**
  * Exception class thrown when a file couldn't be found.
  *

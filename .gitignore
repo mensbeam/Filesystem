@@ -1,6 +1,9 @@
 # Project-specific
 /test*.*
+/tests/.phpunit.cache
 /build
+.php-cs-fixer.cache
+/symfony
 
 # General
 *.DS_Store

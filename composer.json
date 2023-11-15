@@ -8,6 +8,11 @@
             "MensBeam\\": "lib/"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "MensBeam\\Filesystem\\Test\\": "tests/lib/"
+        }
+    },
     "authors": [
         {
             "name": "Dustin Wilson",
@@ -20,7 +25,9 @@
         "symfony/polyfill-mbstring": ">=1.8"
     },
     "require-dev": {
-        "symfony/filesystem": ">=6.2"
+        "friendsofphp/php-cs-fixer": "^3.38",
+        "symfony/filesystem": "*",
+        "phpunit/phpunit": "^10.4"
     },
     "suggest": {
         "ext-ctype": "For better performance",
