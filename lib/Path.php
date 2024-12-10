@@ -250,7 +250,7 @@ class Path {
      * @param string|null $extension if specified, only that extension is cut
      *                               off (may contain leading dot)
      */
-    public static function getFilenameWithoutExtension(string $path, string $extension = null): string {
+    public static function getFilenameWithoutExtension(string $path, ?string $extension = null): string {
         if ('' === $path) {
             return '';
         }
@@ -293,7 +293,7 @@ class Path {
      *                                         without leading dot)
      * @param bool                 $ignoreCase whether to ignore case-sensitivity
      */
-    public static function hasExtension(string $path, $extensions = null, bool $ignoreCase = false): bool {
+    public static function hasExtension(string $path, array|string|null $extensions = null, bool $ignoreCase = false): bool {
         if ('' === $path) {
             return false;
         }

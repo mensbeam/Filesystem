@@ -126,7 +126,7 @@ class Filesystem {
      *
      * @throws IOException When touch fails
      */
-    public static function touch(string|iterable $files, int $time = null, int $atime = null) {
+    public static function touch(string|iterable $files, ?int $time = null, ?int $atime = null) {
         foreach (self::toIterable($files) as $file) {
             if (!($time ? self::box('touch', $file, $time, $atime) : self::box('touch', $file))) {
                 throw new IOException(sprintf('Failed to touch "%s": ', $file) . self::$lastError, 0, null, $file);
@@ -516,7 +516,7 @@ class Filesystem {
      *
      * @throws IOException When file type is unknown
      */
-    public static function mirror(string $originDir, string $targetDir, \Traversable $iterator = null, array $options = []) {
+    public static function mirror(string $originDir, string $targetDir, ?\Traversable $iterator = null, array $options = []) {
         $targetDir = rtrim($targetDir, '/\\');
         $originDir = rtrim($originDir, '/\\');
         $originDirLen = \strlen($originDir);
