@@ -5,9 +5,13 @@
  * Original copyright 2023 Fabien Potencier
  * See LICENSE and AUTHORS files for details
  */
-
-declare(strict_types=1);
 namespace MensBeam\Filesystem;
 
+/**
+ * @author Théo Fidry <theo.fidry@gmail.com>
+ *
+ * This class is automatically generated and built on symfony's Filesystem
+ * component (https://github.com/symfony/filesystem).
+ */
 class RuntimeException extends \RuntimeException {
 }

@@ -5,8 +5,6 @@
  * Original copyright 2023 Fabien Potencier
  * See LICENSE and AUTHORS files for details
  */
-
-declare(strict_types=1);
 namespace MensBeam\Filesystem;
 
 /**
@@ -14,6 +12,9 @@ namespace MensBeam\Filesystem;
  *
  * @author Fabien Potencier <fabien@symfony.com>
  * @author Christian Gärtner <christiangaertner.film@googlemail.com>
+ *
+ * This class is automatically generated and built on symfony's Filesystem
+ * component (https://github.com/symfony/filesystem).
  */
 class FileNotFoundException extends IOException {
     public function __construct(?string $message = null, int $code = 0, ?\Throwable $previous = null, ?string $path = null) {
@@ -21,10 +22,9 @@ class FileNotFoundException extends IOException {
             if (null === $path) {
                 $message = 'File could not be found.';
             } else {
-                $message = sprintf('File "%s" could not be found.', $path);
+                $message = \sprintf('File "%s" could not be found.', $path);
             }
         }
-
         parent::__construct($message, $code, $previous, $path);
     }
 }

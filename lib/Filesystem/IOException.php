@@ -5,8 +5,6 @@
  * Original copyright 2023 Fabien Potencier
  * See LICENSE and AUTHORS files for details
  */
-
-declare(strict_types=1);
 namespace MensBeam\Filesystem;
 
 /**
@@ -15,15 +13,17 @@ namespace MensBeam\Filesystem;
  * @author Romain Neutron <imprec@gmail.com>
  * @author Christian Gärtner <christiangaertner.film@googlemail.com>
  * @author Fabien Potencier <fabien@symfony.com>
+ *
+ * This class is automatically generated and built on symfony's Filesystem
+ * component (https://github.com/symfony/filesystem).
  */
 class IOException extends \RuntimeException {
-    private ?string $path;
-
-    public function __construct(string $message, int $code = 0, ?\Throwable $previous = null, ?string $path = null) {
-        $this->path = $path;
-
+    public function __construct(string $message, int $code = 0, ?\Throwable $previous = null, private ?string $path = null) {
         parent::__construct($message, $code, $previous);
     }
+
+
+
 
     public function getPath(): ?string {
         return $this->path;

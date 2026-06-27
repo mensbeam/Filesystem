@@ -1,16 +1,18 @@
 <?php
 /**
  * @license MIT
- * Copyright 2022 Dustin Wilson, et al.
+ * Copyright 2023 Dustin Wilson, J. King, et al.
+ * Original copyright 2023 Fabien Potencier
  * See LICENSE and AUTHORS files for details
  */
-
-declare(strict_types=1);
 namespace MensBeam\Filesystem\Test;
 
 /**
  * Mock stream class to be used with stream_wrapper_register.
- * stream_wrapper_register('mock', '\MensBeam\Filesystem\Tests\MockStream').
+ * stream_wrapper_register('mock', 'Symfony\Component\Filesystem\Tests\Fixtures\MockStream\MockStream').
+ *
+ * This class is automatically generated and built on symfony's Filesystem
+ * component (https://github.com/symfony/filesystem).
  */
 class MockStream {
     public $context;
